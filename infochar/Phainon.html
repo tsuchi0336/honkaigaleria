@@ -1,0 +1,232 @@
+<html>
+    <head>
+        <title>Phainon</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+            body 
+            {
+                background-color: #1b2136;
+                margin: 0;
+                padding: 20px;
+            }
+            p
+            { 
+                font-family: 'Fontsona 3 FES';
+                color:rgb(230, 225, 201);
+                font-size: 16px;
+            }
+            h1
+            {
+                font-family: "FOT-RodinWanpaku Pro";
+                color:rgb(230, 225, 201);
+                font-size: 40px;
+                display: inline-block;
+                transition: transform 0.25s ease, letter-spacing 0.25s ease;
+                cursor: pointer;
+            }
+            h2
+            { 
+                font-family: 'Fontsona 5 Royal';
+                color:rgb(230, 225, 201);
+                font-size: 16px;
+                font-style: italic;
+            }
+            h3
+            { 
+                font-family: 'Fontsona 1 PSP';
+                color:rgb(230, 225, 201);
+                font-size: 15px;
+            }
+            .skill-container {
+                display: inline-block;
+                width: 150px;
+                vertical-align: top;
+                position: relative;
+                margin-right: 6px;
+            }
+            .skill-container img {
+                display: block;
+            }
+            .skill-tooltip {
+                display: none;
+                position: absolute;
+                bottom: calc(100% + 8px);
+                left: 50%;
+                transform: translateX(-50%);
+                width: 220px;
+                background-color: #0f1524;
+                border: 1px solid rgba(230, 225, 201, 0.3);
+                padding: 10px 12px;
+                z-index: 10;
+            }
+            .skill-tooltip-name {
+                font-family: 'Fontsona 1 PSP';
+                color: rgb(230, 200, 100);
+                font-size: 13px;
+                margin-bottom: 6px;
+            }
+            .skill-tooltip-desc {
+                font-family: 'Fontsona 1 PSP';
+                color: rgb(230, 225, 201);
+                font-size: 11px;
+                line-height: 1.6;
+            }
+            .skill-container:hover .skill-tooltip {
+                display: block;
+            }
+        
+            .comments-section {
+                margin-top: 40px;
+                max-width: 700px;
+            }
+            .comments-section h4 {
+                font-family: 'Fontsona 1 PSP';
+                color: rgb(230, 225, 201);
+                font-size: 16px;
+                margin-bottom: 16px;
+            }
+            .comment-form {
+                background-color: #0f1524;
+                border: 1px solid rgba(230, 225, 201, 0.2);
+                border-radius: 16px;
+                padding: 20px;
+                margin-bottom: 24px;
+            }
+            .comment-form input[type="text"],
+            .comment-form textarea {
+                width: 100%;
+                background-color: #1b2136;
+                border: 1px solid rgba(230, 225, 201, 0.25);
+                border-radius: 10px;
+                color: rgb(230, 225, 201);
+                font-family: 'Fontsona 1 PSP', sans-serif;
+                font-size: 13px;
+                padding: 10px 14px;
+                box-sizing: border-box;
+                outline: none;
+                margin-bottom: 12px;
+                transition: border-color 0.2s;
+            }
+            .comment-form input[type="text"]:focus,
+            .comment-form textarea:focus {
+                border-color: rgba(230, 200, 100, 0.6);
+            }
+            .comment-form textarea {
+                resize: vertical;
+                min-height: 90px;
+            }
+            .comment-form button {
+                background-color: rgba(230, 200, 100, 0.15);
+                border: 1px solid rgba(230, 200, 100, 0.5);
+                border-radius: 10px;
+                color: rgb(230, 200, 100);
+                font-family: 'Fontsona 1 PSP', sans-serif;
+                font-size: 13px;
+                padding: 8px 20px;
+                cursor: pointer;
+                transition: background-color 0.2s;
+            }
+            .comment-form button:hover {
+                background-color: rgba(230, 200, 100, 0.28);
+            }
+            .comments-list {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+            .comment-item {
+                background-color: #0f1524;
+                border: 1px solid rgba(230, 225, 201, 0.15);
+                border-radius: 14px;
+                padding: 14px 18px;
+            }
+            .comment-author {
+                font-family: 'Fontsona 1 PSP';
+                color: rgb(230, 200, 100);
+                font-size: 13px;
+                margin-bottom: 6px;
+            }
+            .comment-text {
+                font-family: 'Fontsona 5 Royal';
+                color: rgb(200, 196, 175);
+                font-size: 13px;
+                line-height: 1.6;
+            }
+            .comment-date {
+                font-family: 'Fontsona 1 PSP';
+                color: rgba(230, 225, 201, 0.4);
+                font-size: 11px;
+                margin-top: 6px;
+            }
+            .no-comments {
+                font-family: 'Fontsona 5 Royal';
+                color: rgba(230, 225, 201, 0.4);
+                font-size: 13px;
+                font-style: italic;
+            }
+            a {
+                text-decoration: none;
+            }
+            h1:hover {
+                transform: scale(1.08);
+                letter-spacing: 2px;
+            }
+        </style>
+    </head>
+   <body>
+        <a href="/home/tsuchi/Practica/index.html"><h1>Phainon</h1></a>
+        <table>
+            <tr>
+                <td>    
+                    <p>Aedes Elysiae, una aldea fronteriza remota aislada del mundo, ahora vive solo en crípticas leyendas.</p>
+                    <p>El héroe sin nombre, ████████, el Heredero de Chrysos que porta la Llama Central de la "Carga del Mundo", memoriza los ideales de todo el mundo, lleva el destino de millones y trae la primera luz del amanecer al nuevo mundo.</p>
+                    <h2>——«Pero si el amanecer nunca llegara, que esta furia consuma este cuerpo, y se alce como el ardiente sol de mañana.»</h2>
+                    <br>
+                    <h3>Phainon es un hombre alto y bien formado, con cabello blanco desordenado hasta el cuello y ojos cian brillantes. En su cuello lleva un collar de cuero marrón que cubre una marca amarilla en forma de sol. Su atuendo consiste en un largo abrigo marrón y blanco hasta los tobillos, con detalles dorados a lo largo. El interior del abrigo es de un amarillo brillante, visible bajo la cintura y en su cuello levantado. Su pecho está adornado con un gran anillo dorado, decorado con numerosos diamantes dorados, y sus mangas poseen un patrón floral que recorre sus lados exteriores. La manga derecha está arremangada hasta el bíceps, dejando ver un protector de brazo marrón con un emblema de sol dorado y dos brazaletes grises. En su brazo izquierdo, la manga está arremangada hasta el antebrazo, y en su lugar lleva un brazalete dorado y un guante marrón sin dedos.</h3>
+                    <h3>Además, Phainon deja caer una gran capa de lapislázuli sobre su hombro izquierdo, conectada por una tela negra que lo cubre. En su hombro derecho lleva una gran hombrera blanca y dorada, y un cinturón de cuero que cruza su pecho y la conecta con el lado izquierdo. Finalmente, Phainon viste pantalones negros, grandes botas y una correa de cuero negra en el muslo.</h3>
+                </td>
+                <td>
+                    <img src="https://static.wikia.nocookie.net/houkai-star-rail/images/4/47/Character_Phainon_Splash_Art.png/revision/latest?cb=20250622125151" alt="Mydei" width="640" height="640">>
+                </td>
+            </tr>
+        </table>
+        <br>
+
+        <div class="skill-container">
+            <img src="https://static.wikia.nocookie.net/houkai-star-rail/images/9/90/Ability_He_Who_Bears_the_World_Must_Burn.png/revision/latest?cb=20250702101204" alt="skill" width="150" height="150">
+            <div class="skill-tooltip">
+                <div class="skill-tooltip-name">He Who Bears the World Must Burn</div>
+                <div class="skill-tooltip-desc">La proporción base de herencia de VEL para el turno extra de Khaslana aumenta al 66%. Por cada enemigo derrotado en una batalla, esta proporción aumenta adicionalmente en un 1,5%, hasta un máximo del 84%. Al usar la habilidad definitiva, aumenta el daño crítico en un 50%, con una duración de 3 turnos.</div>
+            </div>
+        </div>
+
+        <div class="skill-container">
+            <img src="https://static.wikia.nocookie.net/houkai-star-rail/images/7/7e/Ability_Let_There_Be_Light.png/revision/latest?cb=20250702101205" alt="skill" width="150" height="150">
+            <div class="skill-tooltip">
+                <div class="skill-tooltip-name">Let There Be Light</div>
+                <div class="skill-tooltip-desc">La RES PEN física de Khaslana aumenta un 20%. Cuando un uso de "Fundación: Veredicto de la Muerte Estelar" consume 4 puntos de "Azote", obtiene 1 turno extra.</div>
+            </div>
+        </div>
+
+        <div class="skill-container">
+            <img src="https://static.wikia.nocookie.net/houkai-star-rail/images/e/ec/Ability_Stride_to_Deliverance.png/revision/latest?cb=20250702101206" alt="skill" width="150" height="150">
+            <div class="skill-tooltip">
+                <div class="skill-tooltip-name">Stride to Deliverance</div>
+                <div class="skill-tooltip-desc">Nivel definitivo +2, hasta un máximo de nivel 15. Nivel básico de ATK +1, hasta un máximo de nivel 10.</div>
+            </div>
+        </div>
+
+   
+        <div class="comments-section">
+            <h4>Opiniones</h4>
+            <div class="comment-form">
+                <input type="text" id="comment-name-phainon" placeholder="Tu nombre" maxlength="40">
+                <textarea id="comment-text-phainon" placeholder="Escribe tu opinión sobre este personaje..."></textarea>
+                <button>Enviar comentario</button>
+            </div>
+            <div class="comments-list" id="comments-list-phainon">
+                <p class="no-comments">Sé el primero en opinar.</p>
+            </div>
+        </div>
+   </body>
+</html>

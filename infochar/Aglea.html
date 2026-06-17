@@ -1,0 +1,231 @@
+<html>
+    <head>
+        <title>Aglaea</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+            body 
+            {
+                background-color: #1b2136;
+                margin: 0;
+                padding: 20px;
+            }
+            p
+            { 
+                font-family: 'Fontsona 3 FES';
+                color:rgb(230, 225, 201);
+                font-size: 16px;
+            }
+            h1
+            {
+                font-family: "FOT-RodinWanpaku Pro";
+                color:rgb(230, 225, 201);
+                font-size: 40px;
+                display: inline-block;
+                transition: transform 0.25s ease, letter-spacing 0.25s ease;
+                cursor: pointer;
+            }
+            h2
+            { 
+                font-family: 'Fontsona 5 Royal';
+                color:rgb(230, 225, 201);
+                font-size: 16px;
+                font-style: italic;
+            }
+            h3
+            { 
+                font-family: 'Fontsona 1 PSP';
+                color:rgb(230, 225, 201);
+                font-size: 15px;
+            }
+            .skill-container {
+                display: inline-block;
+                width: 150px;
+                vertical-align: top;
+                position: relative;
+                margin-right: 6px;
+            }
+            .skill-container img {
+                display: block;
+            }
+            .skill-tooltip {
+                display: none;
+                position: absolute;
+                bottom: calc(100% + 8px);
+                left: 50%;
+                transform: translateX(-50%);
+                width: 220px;
+                background-color: #0f1524;
+                border: 1px solid rgba(230, 225, 201, 0.3);
+                padding: 10px 12px;
+                z-index: 10;
+            }
+            .skill-tooltip-name {
+                font-family: 'Fontsona 1 PSP';
+                color: rgb(230, 200, 100);
+                font-size: 13px;
+                margin-bottom: 6px;
+            }
+            .skill-tooltip-desc {
+                font-family: 'Fontsona 5 Royal';
+                color: rgb(230, 225, 201);
+                font-size: 11px;
+                line-height: 1.6;
+            }
+            .skill-container:hover .skill-tooltip {
+                display: block;
+            }
+        
+            .comments-section {
+                margin-top: 40px;
+                max-width: 700px;
+            }
+            .comments-section h4 {
+                font-family: 'Fontsona 1 PSP';
+                color: rgb(230, 225, 201);
+                font-size: 16px;
+                margin-bottom: 16px;
+            }
+            .comment-form {
+                background-color: #0f1524;
+                border: 1px solid rgba(230, 225, 201, 0.2);
+                border-radius: 16px;
+                padding: 20px;
+                margin-bottom: 24px;
+            }
+            .comment-form input[type="text"],
+            .comment-form textarea {
+                width: 100%;
+                background-color: #1b2136;
+                border: 1px solid rgba(230, 225, 201, 0.25);
+                border-radius: 10px;
+                color: rgb(230, 225, 201);
+                font-family: 'Fontsona 1 PSP', sans-serif;
+                font-size: 13px;
+                padding: 10px 14px;
+                box-sizing: border-box;
+                outline: none;
+                margin-bottom: 12px;
+                transition: border-color 0.2s;
+            }
+            .comment-form input[type="text"]:focus,
+            .comment-form textarea:focus {
+                border-color: rgba(230, 200, 100, 0.6);
+            }
+            .comment-form textarea {
+                resize: vertical;
+                min-height: 90px;
+            }
+            .comment-form button {
+                background-color: rgba(230, 200, 100, 0.15);
+                border: 1px solid rgba(230, 200, 100, 0.5);
+                border-radius: 10px;
+                color: rgb(230, 200, 100);
+                font-family: 'Fontsona 1 PSP', sans-serif;
+                font-size: 13px;
+                padding: 8px 20px;
+                cursor: pointer;
+                transition: background-color 0.2s;
+            }
+            .comment-form button:hover {
+                background-color: rgba(230, 200, 100, 0.28);
+            }
+            .comments-list {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+            .comment-item {
+                background-color: #0f1524;
+                border: 1px solid rgba(230, 225, 201, 0.15);
+                border-radius: 14px;
+                padding: 14px 18px;
+            }
+            .comment-author {
+                font-family: 'Fontsona 1 PSP';
+                color: rgb(230, 200, 100);
+                font-size: 13px;
+                margin-bottom: 6px;
+            }
+            .comment-text {
+                font-family: 'Fontsona 5 Royal';
+                color: rgb(200, 196, 175);
+                font-size: 13px;
+                line-height: 1.6;
+            }
+            .comment-date {
+                font-family: 'Fontsona 1 PSP';
+                color: rgba(230, 225, 201, 0.4);
+                font-size: 11px;
+                margin-top: 6px;
+            }
+            .no-comments {
+                font-family: 'Fontsona 5 Royal';
+                color: rgba(230, 225, 201, 0.4);
+                font-size: 13px;
+                font-style: italic;
+            }
+            a {
+                text-decoration: none;
+            }
+            h1:hover {
+                transform: scale(1.08);
+                letter-spacing: 2px;
+            }
+        </style>
+    </head>
+   <body>
+        <a href="/home/tsuchi/Practica/index.html"><h1>Aglaea</h1></a>
+        <table>
+            <tr>
+                <td>    
+                    <p>En aquella ciudad sagrada besada por el amanecer, la tejedora acaricia los hilos dorados, entrelazando destinos.</p>
+                    <p>El Heredero de Chrysos que porta la Llama Central de la “Romance” reunió a los héroes del mundo, guiándolos en un largo viaje una vez más</p>
+                    <h2>——«para derribar a los dioses, reclamar la llama divina y otorgar renacimiento al casi caído Amphoreus.»</h2>
+                    <br>
+                    <h3>Aglaea es una mujer alta de piel clara, con cabello rubio dorado corto con matices amarillos brillantes, y ojos azul‑verdosos y amarillos. Su rostro está enmarcado por mechones simétricos que se curvan hacia adentro en las puntas, y su cabello está adornado con pequeñas flores blancas y coronas de laurel doradas asimétricas a cada lado de su cabeza.</h3>
+                    <h3>Viste un vestido estilo toga de color crema con una sola manga abierta en el hombro derecho, decorado con broches de chitón y adornado con elaborados detalles dorados. El vestido tiene una abertura alta en el lado derecho que expone sus piernas, así como accesorios de coronas de laurel doradas que se repiten como motivo en todo su atuendo, incluyendo alrededor de su muslo y tobillos. Su manga está fruncida y atada alrededor de su brazo superior con un lazo negro y amarillo, y en lugar de una manga en el lado izquierdo lleva una tela dorada atada con una cinta amarilla. A lo largo de su espalda cae una pieza de tela dorada en forma de capa, sujeta a sus hombros y que se despliega hacia el lado derecho.</h3>
+                </td>
+                <td>
+                    <img src="https://static.wikia.nocookie.net/houkai-star-rail/images/8/81/Character_Aglaea_Splash_Art.png/revision/latest?cb=20250117063425" alt="Aglea" width="640" height="640">>
+                </td>
+            </tr>
+        </table>
+        <br>
+                <div class="skill-container">
+            <img src="https://static.wikia.nocookie.net/houkai-star-rail/images/6/65/Ability_Dance%2C_Destined_Weaveress.png/revision/latest?cb=20250205022819" alt="skill" width="150" height="150">
+            <div class="skill-tooltip">
+                <div class="skill-tooltip-name">Ability Dance Destined Weaveress</div>
+                <div class="skill-tooltip-desc">Mientras está en "Postura Suprema", aumenta el ATK de Aglaea y Garmentmaker en una cantidad igual al 720% de la SPD de Aglaea más el 360% de la SPD de Garmentmaker.</div>
+            </div>
+        </div>
+
+        <div class="skill-container">
+            <img src="https://static.wikia.nocookie.net/houkai-star-rail/images/1/11/Ability_Rise%2C_Exalted_Renown.png/revision/latest?cb=20250205022821" alt="skill" width="150" height="150">
+            <div class="skill-tooltip">
+                <div class="skill-tooltip-name">Ability Rise Exalted Renown</div>
+                <div class="skill-tooltip-desc">Tras atacar a un enemigo afectado por "Costura", aumenta la VEL de esta unidad en 44-57,2 , acumulándose hasta 6 veces. Cuando Garmentmaker actúa, usa automáticamente "Trampa espinosa", priorizando a los enemigos en estado de "Costura".</div>
+            </div>
+        </div>
+
+        <div class="skill-container">
+            <img src="https://static.wikia.nocookie.net/houkai-star-rail/images/9/90/Ability_Thorned_Nectar.png/revision/latest?cb=20250205022826" alt="skill" width="150" height="150">
+            <div class="skill-tooltip">
+                <div class="skill-tooltip-name">Ability Thorned Nectar</div>
+                <div class="skill-tooltip-desc">Aglaea y Garmentmaker lanzan un ataque conjunto contra el objetivo, infligiendo respectivamente daño de rayo equivalente al 100%-220% del ataque de Aglaea y al 100%-220% del ataque de Garmentmaker. Además, infligen respectivamente daño de rayo equivalente al 45%-99% del ataque de Aglaea y al 45%-99% del ataque de Garmentmaker a los objetivos adyacentes. </div>
+            </div>
+        </div>
+
+   
+        <div class="comments-section">
+            <h4>Comentario</h4>
+            <div class="comment-form">
+                <input type="text" id="comment-name-aglea" placeholder="Tu nombre" maxlength="40">
+                <textarea id="comment-text-aglea" placeholder="Escribe tu opinión sobre este personaje..."></textarea>
+                <button>Enviar comentario</button>
+            </div>
+            <div class="comments-list" id="comments-list-aglea">
+                <p class="no-comments">Sé el primero en opinar.</p>
+            </div>
+        </div>
+   </body>
+</html>

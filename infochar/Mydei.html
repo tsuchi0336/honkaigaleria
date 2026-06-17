@@ -1,0 +1,236 @@
+<html>
+    <head>
+        <title>Mydei</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+            body 
+            {
+                background-color: #1b2136;
+                margin: 0;
+                padding: 20px;
+            }
+
+            p
+            { 
+                font-family: 'Fontsona 3 FES';
+                color:rgb(230, 225, 201);
+                font-size: 16px;
+            }
+            h1
+            {
+                font-family: "FOT-RodinWanpaku Pro";
+                color:rgb(230, 225, 201);
+                font-size: 40px;
+                display: inline-block;
+                transition: transform 0.25s ease, letter-spacing 0.25s ease;
+                cursor: pointer;
+            }
+            h2
+            { 
+                font-family: 'Fontsona 5 Royal';
+                color:rgb(230, 225, 201);
+                font-size: 16px;
+                font-style: italic;
+            }
+            h3
+            { 
+                font-family: 'Fontsona 1 PSP';
+                color:rgb(230, 225, 201);
+                font-size: 15px;
+            }
+            .skill-container {
+                display: inline-block;
+                width: 150px;
+                vertical-align: top;
+                position: relative;
+                margin-right: 6px;
+            }
+            .skill-container img {
+                display: block;
+            }
+            .skill-tooltip {
+                display: none;
+                position: absolute;
+                bottom: calc(100% + 8px);
+                left: 50%;
+                transform: translateX(-50%);
+                width: 220px;
+                background-color: #0f1524;
+                border: 1px solid rgba(230, 225, 201, 0.3);
+                padding: 10px 12px;
+                z-index: 10;
+            }
+            .skill-tooltip-name {
+                font-family: 'Fontsona 1 PSP';
+                color: rgb(230, 200, 100);
+                font-size: 13px;
+                margin-bottom: 6px;
+            }
+            .skill-tooltip-desc {
+                font-family: 'Fontsona 1 PSP';
+                color: rgb(230, 225, 201);
+                font-size: 11px;
+                line-height: 1.6;
+            }
+            .skill-container:hover .skill-tooltip {
+                display: block;
+            }
+        
+            .comments-section {
+                margin-top: 40px;
+                max-width: 700px;
+            }
+            .comments-section h4 {
+                font-family: 'Fontsona 1 PSP';
+                color: rgb(230, 225, 201);
+                font-size: 16px;
+                margin-bottom: 16px;
+            }
+            .comment-form {
+                background-color: #0f1524;
+                border: 1px solid rgba(230, 225, 201, 0.2);
+                border-radius: 16px;
+                padding: 20px;
+                margin-bottom: 24px;
+            }
+            .comment-form input[type="text"],
+            .comment-form textarea {
+                width: 100%;
+                background-color: #1b2136;
+                border: 1px solid rgba(230, 225, 201, 0.25);
+                border-radius: 10px;
+                color: rgb(230, 225, 201);
+                font-family: 'Fontsona 1 PSP', sans-serif;
+                font-size: 13px;
+                padding: 10px 14px;
+                box-sizing: border-box;
+                outline: none;
+                margin-bottom: 12px;
+                transition: border-color 0.2s;
+            }
+            .comment-form input[type="text"]:focus,
+            .comment-form textarea:focus {
+                border-color: rgba(230, 200, 100, 0.6);
+            }
+            .comment-form textarea {
+                resize: vertical;
+                min-height: 90px;
+            }
+            .comment-form button {
+                background-color: rgba(230, 200, 100, 0.15);
+                border: 1px solid rgba(230, 200, 100, 0.5);
+                border-radius: 10px;
+                color: rgb(230, 200, 100);
+                font-family: 'Fontsona 1 PSP', sans-serif;
+                font-size: 13px;
+                padding: 8px 20px;
+                cursor: pointer;
+                transition: background-color 0.2s;
+            }
+            .comment-form button:hover {
+                background-color: rgba(230, 200, 100, 0.28);
+            }
+            .comments-list {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+            .comment-item {
+                background-color: #0f1524;
+                border: 1px solid rgba(230, 225, 201, 0.15);
+                border-radius: 14px;
+                padding: 14px 18px;
+            }
+            .comment-author {
+                font-family: 'Fontsona 1 PSP';
+                color: rgb(230, 200, 100);
+                font-size: 13px;
+                margin-bottom: 6px;
+            }
+            .comment-text {
+                font-family: 'Fontsona 5 Royal';
+                color: rgb(200, 196, 175);
+                font-size: 13px;
+                line-height: 1.6;
+            }
+            .comment-date {
+                font-family: 'Fontsona 1 PSP';
+                color: rgba(230, 225, 201, 0.4);
+                font-size: 11px;
+                margin-top: 6px;
+            }
+            .no-comments {
+                font-family: 'Fontsona 5 Royal';
+                color: rgba(230, 225, 201, 0.4);
+                font-size: 13px;
+                font-style: italic;
+            }
+            a {
+                text-decoration: none;
+            }
+            h1:hover {
+                transform: scale(1.08);
+                letter-spacing: 2px;
+            }
+        </style>
+    </head>
+   <body>
+        <a href="/home/tsuchi/Practica/index.html"><h1>Mydei</h1></a>
+        <table>
+            <tr>
+                <td>    
+                    <p>¡Kremnos, la ciudad envuelta en niebla, caos y guerra! Su linaje real está manchado de parricidio, y su dios lleva el nombre de calamidad.</p>
+                    <p>El inmortal Mydeimos, el león aparte de los demás. El Heredero de Chrysos que busca la Llama Central de la Discordia debe sufrir mil muertes, bañarse en sangre en el camino a casa y cargar en soledad con la locura del destino.</p>
+                    <h2>——«El asesino de reyes sea rey, el asesino de dioses sea dios. Los cascos de hierro retumban a través de la naturaleza salvaje en campaña, y al final deben empaparse con la sangre de su patria.»</h2>
+                    <br>
+                    <h3>Mydei es un hombre alto y bien formado, con cabello rubio fresa claro, desordenado y de longitud media, con puntas rojas. Tiene un mechón trenzado que cuelga a su lado derecho, así como un gran pendiente dorado en la oreja izquierda incrustado con una pequeña gema de zafiro. Sus ojos son amarillos, con iris en forma de sol. El cuerpo de Mydei está cubierto de tatuajes carmesí que se iluminan al usar ciertas habilidades. Está adornado con un gran collar compuesto por placas doradas y gemas de zafiro.</h3>
+                    <h3>Su atuendo consiste en una túnica de color granate oscuro y rojo brillante, que desciende por su hombro izquierdo y cuelga más allá de sus rodillas. También en su hombro izquierdo lleva una hombrera dorada y en su bíceps derecho un brazalete metálico. Mydei posee dos guanteletes dorados idénticos, y un cinturón negro y dorado con una gran hebilla en forma de sol.</h3>
+                </td>
+                <td>
+                    <img src="https://static.wikia.nocookie.net/houkai-star-rail/images/6/67/Character_Mydei_Splash_Art.png/revision/latest?cb=20250725220512" alt="Mydei" width="640" height="640">>
+                </td>
+            </tr>
+        </table>
+        <br>
+         <div class="skill-container">
+            <img src="https://static.wikia.nocookie.net/houkai-star-rail/images/8/8b/Ability_Kingslayer_Be_King.png/revision/latest?cb=20250318012322" alt="skill" width="150" height="150">
+            <div class="skill-tooltip">
+                <div class="skill-tooltip-name">Ability Kingslayer Be King</div>
+                <div class="skill-tooltip-desc">Consume puntos de vida equivalentes al 35% de los puntos de vida actuales de Mydei. Inflige daño imaginario equivalente al 55%-121% de los puntos de vida máximos de Mydei a un enemigo y daño imaginario equivalente al 33%-72,6% de los puntos de vida máximos de Mydei a objetivos adyacentes.
+Si los puntos de vida actuales no son suficientes, usar una habilidad reduce los puntos de vida actuales de Mydei a 1.</div>
+            </div>
+        </div>
+
+        <div class="skill-container">
+            <img src="https://static.wikia.nocookie.net/houkai-star-rail/images/b/b8/Ability_Throne_of_Bones.png/revision/latest?cb=20250318012322" alt="skill" width="150" height="150">
+            <div class="skill-tooltip">
+                <div class="skill-tooltip-name">Ability Throne Of Bones</div>
+                <div class="skill-tooltip-desc">Por cada 1% de HP perdido, acumula 1 punto de Carga (hasta 200 puntos). Cuando la Carga llega a 100, consume 100 puntos de Carga para entrar en el estado "Vendetta", restaura HP equivalente al 15%–27% del HP máximo de Mydei y avanza la acción en un 100%. Mientras el estado "Vendetta" está activo, el HP máximo aumenta en un 50% del HP máximo actual y la DEF permanece en 0. Al comienzo del turno de esta unidad, usa automáticamente "Kingslayer Be King".
+                Cuando la Carga llega a 150 puntos durante el estado "Vendetta", Mydei gana inmediatamente 1 turno extra y usa automáticamente "Godslayer Be God".
+                Cuando recibe un golpe mortal durante el estado "Vendetta", Mydei no será derribado , pero limpiará su Carga, saldrá del estado "Vendetta" y restaurará HP en un 50% de su HP máximo.</div>
+            </div>
+        </div>
+
+        <div class="skill-container">
+            <img src="https://static.wikia.nocookie.net/houkai-star-rail/images/a/ad/Ability_Vow_of_Voyage.png/revision/latest?cb=20250318012323" alt="skill" width="150" height="150">
+            <div class="skill-tooltip">
+                <div class="skill-tooltip-name">Ability Vow of Voyage</div>
+                <div class="skill-tooltip-desc">Consume puntos de vida equivalentes al 35% de los puntos de vida actuales de Mydei. Inflige daño imaginario equivalente al 55%-121% de los puntos de vida máximos de Mydei a un enemigo y daño imaginario equivalente al 33%-72,6% de los puntos de vida máximos de Mydei a objetivos adyacentes.
+Si los puntos de vida actuales no son suficientes, usar una habilidad reduce los puntos de vida actuales de Mydei a 1. </div>
+            </div>
+        </div>
+
+   
+        <div class="comments-section">
+            <h4>Opiniones</h4>
+            <div class="comment-form">
+                <input type="text" id="comment-name-mydei" placeholder="Tu nombre" maxlength="40">
+                <textarea id="comment-text-mydei" placeholder="Escribe tu opinión sobre este personaje..."></textarea>
+                <button>Enviar comentario</button>
+            </div>
+            <div class="comments-list" id="comments-list-mydei">
+                <p class="no-comments">Sé el primero en opinar.</p>
+            </div>
+        </div>
+   </body>
+</html>

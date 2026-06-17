@@ -1,0 +1,234 @@
+<html>
+    <head>
+        <title>Anaxa</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+            body 
+            {
+                background-color: #1b2136;
+                margin: 0;
+                padding: 20px;
+            }
+            p
+            { 
+                font-family: 'Fontsona 3 FES';
+                color:rgb(230, 225, 201);
+                font-size: 16px;
+            }
+            h1
+            {
+                font-family: "FOT-RodinWanpaku Pro";
+                color:rgb(230, 225, 201);
+                font-size: 40px;
+                display: inline-block;
+                transition: transform 0.25s ease, letter-spacing 0.25s ease;
+                cursor: pointer;
+            }
+            h2
+            { 
+                font-family: 'Fontsona 5 Royal';
+                color:rgb(230, 225, 201);
+                font-size: 16px;
+                font-style: italic;
+            }
+            h3
+            { 
+                font-family: 'Fontsona 1 PSP';
+                color:rgb(230, 225, 201);
+                font-size: 15px;
+            }
+        .skill-container {
+                display: inline-block;
+                width: 150px;
+                vertical-align: top;
+                position: relative;
+                margin-right: 6px;
+            }
+            .skill-container img {
+                display: block;
+            }
+            .skill-tooltip {
+                display: none;
+                position: absolute;
+                bottom: calc(100% + 8px);
+                left: 50%;
+                transform: translateX(-50%);
+                width: 220px;
+                background-color: #0f1524;
+                border: 1px solid rgba(230, 225, 201, 0.3);
+                padding: 10px 12px;
+                z-index: 10;
+            }
+            .skill-tooltip-name {
+                font-family: 'Fontsona 1 PSP';
+                color: rgb(230, 200, 100);
+                font-size: 13px;
+                margin-bottom: 6px;
+            }
+            .skill-tooltip-desc {
+                font-family: 'Fontsona 1 PSP';
+                color: rgb(230, 225, 201);
+                font-size: 11px;
+                line-height: 1.6;
+            }
+            .skill-container:hover .skill-tooltip {
+                display: block;
+            }
+        
+            .comments-section {
+                margin-top: 40px;
+                max-width: 700px;
+            }
+            .comments-section h4 {
+                font-family: 'Fontsona 1 PSP';
+                color: rgb(230, 225, 201);
+                font-size: 16px;
+                margin-bottom: 16px;
+            }
+            .comment-form {
+                background-color: #0f1524;
+                border: 1px solid rgba(230, 225, 201, 0.2);
+                border-radius: 16px;
+                padding: 20px;
+                margin-bottom: 24px;
+            }
+            .comment-form input[type="text"],
+            .comment-form textarea {
+                width: 100%;
+                background-color: #1b2136;
+                border: 1px solid rgba(230, 225, 201, 0.25);
+                border-radius: 10px;
+                color: rgb(230, 225, 201);
+                font-family: 'Fontsona 1 PSP', sans-serif;
+                font-size: 13px;
+                padding: 10px 14px;
+                box-sizing: border-box;
+                outline: none;
+                margin-bottom: 12px;
+                transition: border-color 0.2s;
+            }
+            .comment-form input[type="text"]:focus,
+            .comment-form textarea:focus {
+                border-color: rgba(230, 200, 100, 0.6);
+            }
+            .comment-form textarea {
+                resize: vertical;
+                min-height: 90px;
+            }
+            .comment-form button {
+                background-color: rgba(230, 200, 100, 0.15);
+                border: 1px solid rgba(230, 200, 100, 0.5);
+                border-radius: 10px;
+                color: rgb(230, 200, 100);
+                font-family: 'Fontsona 1 PSP', sans-serif;
+                font-size: 13px;
+                padding: 8px 20px;
+                cursor: pointer;
+                transition: background-color 0.2s;
+            }
+            .comment-form button:hover {
+                background-color: rgba(230, 200, 100, 0.28);
+            }
+            .comments-list {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+            .comment-item {
+                background-color: #0f1524;
+                border: 1px solid rgba(230, 225, 201, 0.15);
+                border-radius: 14px;
+                padding: 14px 18px;
+            }
+            .comment-author {
+                font-family: 'Fontsona 1 PSP';
+                color: rgb(230, 200, 100);
+                font-size: 13px;
+                margin-bottom: 6px;
+            }
+            .comment-text {
+                font-family: 'Fontsona 5 Royal';
+                color: rgb(200, 196, 175);
+                font-size: 13px;
+                line-height: 1.6;
+            }
+            .comment-date {
+                font-family: 'Fontsona 1 PSP';
+                color: rgba(230, 225, 201, 0.4);
+                font-size: 11px;
+                margin-top: 6px;
+            }
+            .no-comments {
+                font-family: 'Fontsona 5 Royal';
+                color: rgba(230, 225, 201, 0.4);
+                font-size: 13px;
+                font-style: italic;
+            }
+            a {
+                text-decoration: none;
+            }
+            h1:hover {
+                transform: scale(1.08);
+                letter-spacing: 2px;
+            }
+        </style>
+    </head>
+   <body>
+        <a href="/home/tsuchi/Practica/index.html"><h1>Anaxa</h1></a>
+        <table>
+            <tr>
+                <td>    
+                    <p>El Bosquecillo de la Epifanía, donde florece el conocimiento y nacen los filósofos.</p>
+                    <p>Y aquí se alza Anaxágoras el blasfemo, el Heredero de Chrysos que desafía la Llama Central de la Razón. Se le pregunta: ¿Desafiarías la profecía incluso si debieras cargar con la infamia, e insistir en clavar las espinas de la duda en el Árbol Sagrado de la sabiduría?</p>
+                    <h2>——«Ridículo. En un mundo lleno de mentiras, yo soy la única verdad.»</h2>
+                    <br>
+                    <h3>Anaxa es un joven de piel pálida, con largo cabello verde claro recogido en una coleta sobre su hombro derecho, y ojos aguamarina pálidos con pupilas magenta. Tiene un tatuaje rojo en la mano derecha, así como un parche negro con patrón dorado sobre su ojo izquierdo.</h3>
+                    <h3>Viste una chaqueta negra y verde azulado con mangas separadas, además de una esclavina blanca y negra adornada con detalles dorados y un ascot blanco. En el centro de su pecho lleva una estrella verde azulado de ocho puntas. También usa pantalones negros y zapatos cristalinos verde azulado con detalles negros y suelas rojas, junto con varias piezas de joyería dorada y guantes parcialmente sin dedos en su mano izquierda.</h3> 
+                </td>
+                <td>
+                    <img src="https://static.wikia.nocookie.net/houkai-star-rail/images/7/73/Character_Anaxa_Splash_Art.png/revision/latest?cb=20250409035048" alt="Anaxa" width="640" height="640">>
+                </td>
+            </tr>
+        </table>
+        <br>
+                <div class="skill-container">
+            <img src="https://static.wikia.nocookie.net/houkai-star-rail/images/5/5c/Ability_Sprouting_Life_Sculpts_Earth.png/revision/latest?cb=20250423100758" alt="skill" width="150" height="150">
+            <div class="skill-tooltip">
+                <div class="skill-tooltip-name">Ability Sprouting Life Sculpts Earth</div>
+                <div class="skill-tooltip-desc">Inflige el estado "Sublimación" a todos los enemigos y luego les inflige daño de viento equivalente al 80%-176% del ATK de Anaxa.
+En el estado "Sublimación", los objetivos sufren simultáneamente debilidades físicas, de fuego, hielo, relámpago, viento, cuánticas e imaginarias, que duran hasta el inicio de su turno. Si los objetivos no tienen Resistencia al Control, no pueden actuar en el estado "Sublimación".</div>
+            </div>
+        </div>
+
+        <div class="skill-container">
+            <img src="https://static.wikia.nocookie.net/houkai-star-rail/images/1/17/Ability_Pain%2C_Brews_Truth.png/revision/latest?cb=20250423100756" alt="skill" width="150" height="150">
+            <div class="skill-tooltip">
+                <div class="skill-tooltip-name">Ability Pain Brews Truth</div>
+                <div class="skill-tooltip-desc">Inflige daño de viento equivalente al 35%-77% del ATK de Anaxa a un enemigo designado y, además, inflige 4 instancias de daño. Cada instancia de daño inflige daño de viento equivalente al 35%-77% del ATK de Anaxa a un enemigo aleatorio, priorizando el rebote a los enemigos que no hayan sido alcanzados por esta instancia de habilidad.
+Al usarse, por cada enemigo atacable en el campo, el daño infligido por esta habilidad aumenta un 20%.</div>
+            </div>
+        </div>
+
+        <div class="skill-container">
+            <img src="https://static.wikia.nocookie.net/houkai-star-rail/images/7/76/Ability_Fractal%2C_Exiles_Fallacy.png/revision/latest?cb=20250423100755" alt="skill" width="150" height="150">
+            <div class="skill-tooltip">
+                <div class="skill-tooltip-name">Ability Fractal Exiles Fallacy</div>
+                <div class="skill-tooltip-desc">Tras usar la Técnica, inflige el estado de Aterrorizado a los enemigos en un área determinada. Los enemigos aterrorizados huirán en dirección contraria a Anaxa durante 10 segundos. Cuando los aliados entran en combate atacando activamente a un enemigo aterrorizado, siempre se considerará que entran en combate atacando una Debilidad. Tras entrar en combate, Anaxa aplica 1 Debilidad del Tipo del atacante a cada objetivo enemigo, con una duración de 3 turnos</div>
+            </div>
+        </div>
+
+   
+        <div class="comments-section">
+            <h4>Opiniones</h4>
+            <div class="comment-form">
+                <input type="text" id="comment-name-anaxa" placeholder="Tu nombre" maxlength="40">
+                <textarea id="comment-text-anaxa" placeholder="Escribe tu opinión sobre este personaje..."></textarea>
+                <button>Enviar comentario</button>
+            </div>
+            <div class="comments-list" id="comments-list-anaxa">
+                <p class="no-comments">Sé el primero en opinar.</p>
+            </div>
+        </div>
+
+   </body>
+</html>
